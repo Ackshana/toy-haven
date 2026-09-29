@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Support | Toy Haven</title>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Toy Haven - toys, figurines, board games and diecast cars.">
+<link rel="icon" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+<!-- HEADER / NAVIGATION -->
+<header class="header">
+    <div class="container header-inner">
+
+        <a class="logo" href="index.html">TOY HAVEN</a>
+
+        <!-- Mobile menu button -->
+        <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="main-nav" class="nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="cart.html">
+                Cart <span class="cart-number">0</span>
+            </a>
+            <a href="support.html">Support</a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+<!-- SUPPORT PAGE -->
+
+<section class="page-head container">
+
+    <p class="kicker">HELP CENTRE</p>
+
+    <h1>Feedback & Support.</h1>
+
+    <p>
+        Send feedback or read our frequently asked questions.
+    </p>
+
+</section>
+
+
+<section class="section container form-layout">
+
+    <!-- FEEDBACK FORM -->
+
+    <form id="feedbackForm" class="form-box">
+
+        <h2>Send Feedback</h2>
+
+        <div class="form-group">
+
+            <label for="feedbackName">
+                Name
+            </label>
+
+            <input
+                id="feedbackName"
+                type="text"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="feedbackEmail">
+                Email
+            </label>
+
+            <input
+                id="feedbackEmail"
+                type="email"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="feedbackMessage">
+                Message
+            </label>
+
+            <textarea
+                id="feedbackMessage"
+                rows="7"
+                required
+            ></textarea>
+
+        </div>
+
+
+        <p id="feedbackStatus" aria-live="polite"></p>
+
+        <button class="btn btn-black" type="submit">
+            Send Feedback
+        </button>
+
+    </form>
+
+
+    <!-- FAQ -->
+
+    <div>
+
+        <h2>Frequently Asked Questions</h2>
+
+
+        <div class="faq">
+
+            <button class="faq-question" aria-expanded="false">
+                How does the wishlist work?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+                Click the heart button on a product and it will
+                be saved to the wishlist.
+            </div>
+
+        </div>
+
+
+        <div class="faq">
+
+            <button class="faq-question" aria-expanded="false">
+                Does the cart save after refreshing?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+                Yes. The cart is saved using localStorage.
+            </div>
+
+        </div>
+
+
+        <div class="faq">
+
+            <button class="faq-question" aria-expanded="false">
+                Is payment real?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+                No. Checkout is only a front-end simulation.
+            </div>
+
+        </div>
+
+
+        <div class="faq">
+
+            <button class="faq-question" aria-expanded="false">
+                Can I search products?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+                Yes. The Products page has product-name search
+                and category filters.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div>
+            <h3>TOY HAVEN</h3>
+            <p>A simple online collection for toy fans and collectors.</p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <a href="products.html">Products</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="cart.html">Cart</a>
+            <a href="support.html">Support</a>
+        </div>
+
+        <div>
+            <h3>Newsletter</h3>
+
+            <form id="newsletterForm" class="newsletter">
+
+                <input
+                    id="newsletterEmail"
+                    type="email"
+                    placeholder="Your email"
+                    aria-label="Newsletter email address"
+                    required
+                >
+
+                <button class="btn btn-white" type="submit">
+                    Join
+                </button>
+
+            </form>
+
+            <p id="newsletterMessage"></p>
+        </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+        <p>© 2026 Toy Haven</p>
+    </div>
+
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

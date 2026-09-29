@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cart | Toy Haven</title>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Toy Haven - toys, figurines, board games and diecast cars.">
+<link rel="icon" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+<!-- HEADER / NAVIGATION -->
+<header class="header">
+    <div class="container header-inner">
+
+        <a class="logo" href="index.html">TOY HAVEN</a>
+
+        <!-- Mobile menu button -->
+        <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="main-nav" class="nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="cart.html">
+                Cart <span class="cart-number">0</span>
+            </a>
+            <a href="support.html">Support</a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+<!-- CART PAGE -->
+
+<section class="page-head container">
+
+    <p class="kicker">YOUR CART</p>
+
+    <h1>Shopping cart.</h1>
+
+    <p>
+        Your cart is saved in your browser.
+    </p>
+
+</section>
+
+
+<section class="section container cart-layout">
+
+    <div>
+
+        <div id="cartItems"></div>
+
+    </div>
+
+
+    <aside class="summary">
+
+        <h2>Order Summary</h2>
+
+        <div class="summary-row">
+            <span>Total</span>
+            <strong id="cartTotal">$0.00</strong>
+        </div>
+
+        <button id="clearCart" class="btn btn-white">
+            Clear Cart
+        </button>
+
+        <a id="checkoutButton" class="btn btn-black" href="checkout.html">
+            Checkout
+        </a>
+
+    </aside>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div>
+            <h3>TOY HAVEN</h3>
+            <p>A simple online collection for toy fans and collectors.</p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <a href="products.html">Products</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="cart.html">Cart</a>
+            <a href="support.html">Support</a>
+        </div>
+
+        <div>
+            <h3>Newsletter</h3>
+
+            <form id="newsletterForm" class="newsletter">
+
+                <input
+                    id="newsletterEmail"
+                    type="email"
+                    placeholder="Your email"
+                    aria-label="Newsletter email address"
+                    required
+                >
+
+                <button class="btn btn-white" type="submit">
+                    Join
+                </button>
+
+            </form>
+
+            <p id="newsletterMessage"></p>
+        </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+        <p>© 2026 Toy Haven</p>
+    </div>
+
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

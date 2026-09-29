@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home | Toy Haven</title>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Toy Haven - toys, figurines, board games and diecast cars.">
+<link rel="icon" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+<!-- HEADER / NAVIGATION -->
+<header class="header">
+    <div class="container header-inner">
+
+        <a class="logo" href="index.html">TOY HAVEN</a>
+
+        <!-- Mobile menu button -->
+        <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="main-nav" class="nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="cart.html">
+                Cart <span class="cart-number">0</span>
+            </a>
+            <a href="support.html">Support</a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+<!--HOME PAGE-->
+
+<section class="hero container">
+
+    <div>
+        <p class="kicker">COLLECT • PLAY • DISPLAY</p>
+
+        <h1 id="heroTitle">
+            Collectible figurines for your shelf.
+        </h1>
+
+        <p>
+            Discover figurines, toys, board games and diecast cars
+            in one simple Toy Haven collection.
+        </p>
+
+        <div class="hero-buttons">
+            <a class="btn btn-white" href="products.html">
+                Shop Now
+            </a>
+        </div>
+    </div>
+
+    <div>
+        <div class="hero-image">
+            <img
+                id="heroImage"
+                src="assets/forest.jpg"
+                alt="Toy Haven product"
+            >
+        </div>
+
+        <p id="heroCategory" class="kicker">
+            FIGURINES
+        </p>
+
+        <div class="slider-buttons">
+            <button class="slider-button active" aria-label="Show figurines banner"></button>
+            <button class="slider-button" aria-label="Show banner"></button>
+            <button class="slider-button" aria-label="Show banner"></button>
+            <button class="slider-button" aria-label="Show banner"></button>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- PRODUCT OF THE DAY -->
+<section class="section container">
+
+    <div class="section-title">
+        <p class="kicker">PRODUCT OF THE DAY</p>
+        <h2>Today's Toy Haven pick</h2>
+    </div>
+
+    <div id="productOfDay"></div>
+
+</section>
+
+
+<!-- CATEGORY SECTION -->
+<section class="section container">
+
+    <div class="section-title">
+        <p class="kicker">SHOP BY CATEGORY</p>
+        <h2>Find your kind of fun.</h2>
+    </div>
+
+    <div class="category-grid">
+
+        <!-- FIGURINES -->
+        <a class="category-box"
+           href="products.html?category=Figurines">
+
+            <img
+                src="assets/forest.jpg"
+                alt="Figurines">
+
+            <div class="category-info">
+                <h3>Figurines</h3>
+                <span>01</span>
+            </div>
+
+        </a>
+
+
+        <!-- TOYS -->
+        <a class="category-box"
+           href="products.html?category=Toys">
+
+            <img
+                src="assets/marble.jpg"
+                alt="Toys">
+
+            <div class="category-info">
+                <h3>Toys</h3>
+                <span>02</span>
+            </div>
+
+        </a>
+
+
+        <!-- BOARD GAMES -->
+        <a class="category-box"
+           href="products.html?category=Board Games">
+
+            <img
+                src="assets/orbit.jpg"
+                alt="Board Games">
+
+            <div class="category-info">
+                <h3>Board Games</h3>
+                <span>03</span>
+            </div>
+
+        </a>
+
+
+        <!-- DIECAST CARS -->
+        <a class="category-box"
+           href="products.html?category=Diecast Cars">
+
+            <img
+                src="assets/campervan.jpg"
+                alt="Diecast Cars">
+
+            <div class="category-info">
+                <h3>Diecast Cars</h3>
+                <span>04</span>
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- COLLECTION MESSAGE -->
+<section class="section container">
+
+    <div style="background:#111; color:#fff; padding:40px;">
+        <p class="kicker">YOUR COLLECTION</p>
+
+        <h2>
+            Save the toys you want to own.
+        </h2>
+
+        <p>
+            Use the wishlist to mark products as Interested,
+            Owned or Not Interested.
+        </p>
+
+        <a class="btn btn-white" href="wishlist.html">
+            Open Wishlist
+        </a>
+    </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div>
+            <h3>TOY HAVEN</h3>
+            <p>A simple online collection for toy fans and collectors.</p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <a href="products.html">Products</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="cart.html">Cart</a>
+            <a href="support.html">Support</a>
+        </div>
+
+        <div>
+            <h3>Newsletter</h3>
+
+            <form id="newsletterForm" class="newsletter">
+
+                <input
+                    id="newsletterEmail"
+                    type="email"
+                    placeholder="Your email"
+                    aria-label="Newsletter email address"
+                    required
+                >
+
+                <button class="btn btn-white" type="submit">
+                    Join
+                </button>
+
+            </form>
+
+            <p id="newsletterMessage"></p>
+        </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+        <p>© 2026 Toy Haven</p>
+    </div>
+
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
