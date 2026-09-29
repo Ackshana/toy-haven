@@ -109,7 +109,7 @@ function createProductCard(product) {
                     </button>
                     <button class="small-button"
                             onclick="showProduct(${product.id})">
-                        View Product
+                        Details
                     </button>
                 </div>
             </div>
@@ -322,12 +322,33 @@ function showProductOfTheDay() {
                 <button class="btn btn-black" onclick="addToCart(${product.id})">
                     Add to Cart
                 </button>
-                <button class="btn btn-white" onclick="showProduct(${product.id})">
-                    View Product
-                </button>
             </div>
         </div>
     `;
+}
+
+/* Featured products (home page) */
+
+function showFeaturedProducts() {
+    const box = document.querySelector("#featuredProducts");
+    if (!box) return;
+
+    /* first 4 products only */
+    const featured = products.slice(0, 4);
+
+    box.innerHTML = featured.map(product => `
+        <article class="product-card">
+            <img class="product-card-image" src="${product.image}" alt="${product.name}">
+            <div class="product-card-content">
+                <p class="product-category">${product.category}</p>
+                <h3>${product.name}</h3>
+                <p class="price">${money(product.price)}</p>
+                <button class="small-button black" onclick="addToCart(${product.id})">
+                    Add to Cart
+                </button>
+            </div>
+        </article>
+    `).join("");
 }
 
 /* cart page */
@@ -425,18 +446,20 @@ function showCheckoutItems() {
     const cart = getData("toyHavenCart", []);
 
     if (!cart.length) {
-        box.innerHTML = "<p>Your cart is empty.</p>";
+        box.innerHTML = "<tr><td colspan=\"3\">Your cart is empty.</td></tr>";
         return;
     }
 
+    /* one table row for each product */
     box.innerHTML = cart.map(item => {
         const product = findProduct(item.id);
         if (!product) return "";
         return `
-            <div class="checkout-item">
-                <span>${product.name} × ${item.quantity}</span>
-                <strong>${money(product.price * item.quantity)}</strong>
-            </div>
+            <tr>
+                <td>${product.name}</td>
+                <td>${item.quantity}</td>
+                <td>${money(product.price * item.quantity)}</td>
+            </tr>
         `;
     }).join("");
 }
@@ -654,6 +677,7 @@ if ("IntersectionObserver" in window) {
 updateCartNumber();
 showProducts();
 showProductOfTheDay();
+showFeaturedProducts();
 showCart();
 showCheckoutTotal();
 showCheckoutItems();

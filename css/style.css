@@ -191,6 +191,7 @@ button {
 .slider-button {
     width: 10px;
     height: 10px;
+    margin: 0 8px;
     padding: 0;
     border: 1px solid #fff;
     border-radius: 50%;
@@ -375,7 +376,7 @@ button {
 }
 
 .product-category {
-    color: #777;
+    color: #666;
     font-size: 12px;
     text-transform: uppercase;
     font-weight: bold;
@@ -769,19 +770,6 @@ button {
     margin-top: 15px;
 }
 
-.checkout-items {
-    margin-bottom: 10px;
-}
-
-.checkout-item {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
-    font-size: 14px;
-}
-
 .empty-state {
     padding: 25px;
     border: 1px dashed #bbb;
@@ -836,4 +824,59 @@ select:focus-visible {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Hamburger animation - 3 lines turn into an X when menu is open */
+
+.menu-button span {
+    transition: transform .3s ease, opacity .3s ease;
+}
+
+.menu-button[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-button[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-button[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Checkout radio buttons */
+
+fieldset {
+    border: 0;
+    padding: 0;
+}
+
+legend {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.form-group .radio {
+    font-weight: normal;
+}
+
+.form-group .radio input {
+    width: auto;
+    margin-right: 6px;
+}
+
+/* Checkout order table */
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.order-table th,
+.order-table td {
+    text-align: left;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
 }

@@ -60,6 +60,8 @@
 
     <form id="checkoutForm" class="form-box">
 
+        <h2>Your Details</h2>
+
         <div class="form-group">
             <label for="name">Full Name</label>
 
@@ -93,30 +95,31 @@
         </div>
 
 
-        <div class="form-group">
+        <!-- fieldset groups the radio buttons, legend is the group title -->
+        <fieldset class="form-group">
 
-            <label>Payment Method</label>
-
-            <label class="radio">
-                <input
-                    type="radio"
-                    name="payment"
-                    value="Card"
-                    checked
-                >
-                Card
-            </label>
+            <legend>Payment Method</legend>
 
             <label class="radio">
                 <input
                     type="radio"
                     name="payment"
                     value="Cash on Delivery"
+                    checked
                 >
                 Cash on Delivery
             </label>
 
-        </div>
+            <label class="radio">
+                <input
+                    type="radio"
+                    name="payment"
+                    value="Card"
+                >
+                Card
+            </label>
+
+        </fieldset>
 
 
         <p id="checkoutError" class="error" aria-live="polite"></p>
@@ -130,10 +133,19 @@
 
     <aside class="summary">
 
-        <h2>Order Total</h2>
+        <h2>Order Summary</h2>
 
-        <h3>Order Items</h3>
-        <div id="checkoutItems" class="checkout-items"></div>
+        <!-- order summary table, rows are added by showCheckoutItems() in script.js -->
+        <table class="order-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Qty</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="checkoutItems"></tbody>
+        </table>
 
         <div class="summary-row">
             <span>Total</span>

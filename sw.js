@@ -1,4 +1,4 @@
-const cacheName = "toy-haven-v2";
+const cacheName = "toy-haven-v3";
 
 const files = [
     "index.html",
@@ -44,16 +44,9 @@ self.addEventListener("activate", event => {
     self.clients.claim();
 });
 
+/* try the internet first, if offline use the saved copy */
 self.addEventListener("fetch", event => {
     event.respondWith(
-        caches.match(event.request).then(response => {
-            return response || fetch(event.request).then(networkResponse => {
-                if (event.request.method === "GET" && networkResponse.ok) {
-                    const copy = networkResponse.clone();
-                    caches.open(cacheName).then(cache => cache.put(event.request, copy));
-                }
-                return networkResponse;
-            });
-        })
+        fetch(event.request).catch(() => caches.match(event.request))
     );
 });
