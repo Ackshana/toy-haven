@@ -880,3 +880,12 @@ legend {
     padding: 8px 0;
     border-bottom: 1px solid #eee;
 }
+
+/* newsletter message in the black footer */
+.footer .form-success {
+    color: #fff;
+}
+
+.footer .error {
+    color: #ff8080;
+}
